@@ -12,7 +12,6 @@ import net.dv8tion.jda.api.entities.Activity
 import net.dv8tion.jda.api.interactions.commands.DefaultMemberPermissions
 import net.dv8tion.jda.api.interactions.commands.OptionType
 import net.dv8tion.jda.api.interactions.commands.build.Commands
-import net.dv8tion.jda.api.requests.GatewayIntent
 import kotlin.time.Duration.Companion.seconds
 
 val config : Dotenv = Dotenv.configure().ignoreIfMissing().load()
@@ -62,7 +61,6 @@ class Nimbus {
 }
 
 fun main(args: Array<String>) {
-    Nimbus()
     Nimbus().activityShuffle()
     println("Main class initialised")
     registerCmds(jda)

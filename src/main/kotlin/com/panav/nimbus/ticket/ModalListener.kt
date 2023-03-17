@@ -12,9 +12,10 @@ class ModalListener : ListenerAdapter() {
             val issue = event.getValue("issue")?.asString
             val member : Member = event.member!!
 
+            println("Creating ticket")
             TicketManager.createTicket(member, ign!!, issue!!)
 
-            event.reply("Thank you for your request").setEphemeral(true).submit(true)
+            event.reply("Thank you for your request").setEphemeral(true).submit()
         }
     }
 }
